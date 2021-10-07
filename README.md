@@ -5,3 +5,6 @@ I wrote these scripts so I can quickly start a playlist without having to open u
 
 subsequeently addded the nowplaying script so i can see song info and time remaining easily.  using generic monitor plugin (xfce DE) to display the /tmp file with the media information.
 
+![screenshot1](https://user-images.githubusercontent.com/37476191/136313827-3cd7d369-228f-4d6f-a29f-65fe40042ce8.png)
+
+![screeshot2](https://user-images.githubusercontent.com/37476191/136313834-e9d78d12-b4f7-4794-b340-c57c87218bc4.png)
