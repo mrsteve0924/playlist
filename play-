@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# same as the play scipt, but can add a specfic song or artist to playlist
+
 pkill nowplaying   # prevents multiple instances running if this script is called multiple times
 
 read -p "artist or song: " audio
