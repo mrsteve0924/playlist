@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#adds entire directory of choice to a playlist in /tmp folder
+#use nowplaying scipt to see song info in panel 
+
 pkill nowplaying  # prevents multiple instances running if this script is called multiple times
 
 find /mnt/files.ntfs/Multimedia/Music -type f -not -path '*/\.*' | sort > /tmp/playlist.m3u
