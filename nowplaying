@@ -6,7 +6,7 @@
 while pgrep vlc > /dev/null
 do
 	sleep 0.5
-	curl -s -u :play http://127.0.0.1:8080/requests/status.xml -o /tmp/status.xml #--trace curl
+	curl -s -u :password http://127.0.0.1:8080/requests/status.xml -o /tmp/status.xml
 	
 	length=$(xmllint --xpath '//length/text()' /tmp/status.xml)
 	elapsed_time=$(xmllint --xpath '//time/text()' /tmp/status.xml)
