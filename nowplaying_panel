@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ ! -f /tmp/nowplaying ] ; then echo "" ; else cat /tmp/nowplaying2 ; fi
+
+#if [ ! -f /tmp/nowplaying ] ; then echo "" ; else echo "$(</tmp/nowplaying)" ; fi
