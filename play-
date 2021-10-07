@@ -5,7 +5,7 @@
 pkill nowplaying   # prevents multiple instances running if this script is called multiple times
 
 read -p "artist or song: " audio
-find /mnt/files.ntfs/Multimedia/Music -type f -not -path "*/\.*" | sort > /tmp/playlist.m3u
+find ~/Multimedia/Music -type f -not -path "*/\.*" | sort > /tmp/playlist.m3u
 
 grep -iE "$audio" /tmp/playlist.m3u > /tmp/playlist2.m3u
 cvlc --play-and-exit /tmp/playlist2.m3u </dev/null &>/dev/null&
