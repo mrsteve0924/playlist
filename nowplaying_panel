@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#used wih panel plugin to monitor media info file in /tmp directory and display in panel
+
 if [ ! -f /tmp/nowplaying ] ; then echo "" ; else cat /tmp/nowplaying2 ; fi
 
-#if [ ! -f /tmp/nowplaying ] ; then echo "" ; else echo "$(</tmp/nowplaying)" ; fi
