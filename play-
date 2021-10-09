@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# same as the play scipt, but can choose a specfic song or artist to playlist
+# same as the play scipt, but can choose a specfic song or artist
 
 pkill nowplaying   # prevents multiple instances running if this script is called multiple times
 
