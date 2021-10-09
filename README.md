@@ -6,7 +6,7 @@ I wrote these scripts so I can quickly start listening to my locally stored musi
 subsequently addded the nowplaying script so i can see song info and time remaining easily.  using generic monitor plugin (xfce DE) to display the /tmp file with the media information.
 
 From Terminal  
-play will queue up your locally stored audio files and play them
+play will queue up your locally stored audio files and play them  
 play- will allow you to choose a specific artist or song
 ![screenshot1](https://user-images.githubusercontent.com/37476191/136313827-3cd7d369-228f-4d6f-a29f-65fe40042ce8.png)
 
