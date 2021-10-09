@@ -1,7 +1,7 @@
 ## playlist  
 A few shell scripts to play your audio collection and provide artist &amp; song title with timer in your panel
 
-Requirements
+Requirements  
 using vlc to play audio files as well using vlc's media server to get song information
 
 I wrote these scripts so I can quickly start listening to my locally stored music without having to open up the VLC gui or type a string of commands in the temrinal. mapped the play script to a keyboard shortcut for quick launching. 
