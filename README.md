@@ -4,7 +4,7 @@ A few shell scripts to play your audio collection and provide artist &amp; song 
 Requirements  
 VLC. Using cvlc command to play audio files as well using vlc's media server to get song information
 
-I wrote these scripts so I can quickly start listening to my locally stored music without having to open up the VLC gui or type a string of commands in the termina. mapped the play script to a keyboard shortcut for quick launching. 
+I wrote these scripts so I can quickly start listening to my locally stored music without having to open up the VLC gui or type a string of commands in the terminal. mapped the play script to a keyboard shortcut for quick launching. 
 
 subsequently addded the nowplaying script so i can see song info and time remaining easily.  using generic monitor plugin (xfce) to display a /tmp file with the media information.
 
