@@ -1,22 +1,26 @@
 #!/bin/bash
 
-#pulls media information from running vlc media server. writes data to /tmp folder in order to display on panel
-#must set up vlc to start server on start
-
 while pgrep vlc > /dev/null
 do
 	sleep 0.5
-	curl -s -u :password http://127.0.0.1:8080/requests/status.xml -o /tmp/status.xml
+	curl -s -u :play http://127.0.0.1:8080/requests/status.xml -o /tmp/status.xml #--trace curl
 	
 	length=$(xmllint --xpath '//length/text()' /tmp/status.xml)
 	elapsed_time=$(xmllint --xpath '//time/text()' /tmp/status.xml)
 	time_left=$(echo "$length-$elapsed_time" | bc)
 	
 	xmllint --xpath '//information/category[@name="meta"]/info[@name="filename"]/text()' /tmp/status.xml > /tmp/nowplaying
-	printf '%dm:%ds\n' $(($time_left%3600/60)) $(($time_left%60)) >> /tmp/nowplaying
-	sed -e "s/&amp;#39;/\'/g" -e 's/&amp;amp;/\&/g' -e 's/.mp3//gI' -e 's/.m4a//gI' -e 's/.mp4//gI' -e 's/.wav//gI' -e 's/.aac//gI' -e 's/.adts//gI' /tmp/nowplaying > /tmp/nowplaying2
+	echo -n "+" >> /tmp/nowplaying	
+	printf '%dm:%ds' $(($elapsed_time%3600/60)) $(($elapsed_time%60)) >> /tmp/nowplaying
+	echo -n "   -" >> /tmp/nowplaying	
+	printf '%dm:%ds' $(($time_left%3600/60)) $(($time_left%60)) >> /tmp/nowplaying
+	sed -e "s/&amp;#39;/\'/g" -e 's/&amp;amp;/\&/g' -e 's/.mp3//gI' -e 's/.m4a//gI' -e 's/.mp4//gI' -e 's/.wav//gI' -e 's/.aac//gI' -e 's/.adts//gI' -e 's/.webm//gI' /tmp/nowplaying > /tmp/nowplaying2
 
 done
 
 rm /tmp/nowplaying
+rm /tmp/nowplaying2
+
+
+
 

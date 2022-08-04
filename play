@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#adds entire directory of choice to a playlist in /tmp folder
-#use nowplaying scipt to see song info in panel 
 
 pkill nowplaying  # prevents multiple instances running if this script is called multiple times
 
-find ~/Multimedia/Music -type f -not -path '*/\.*' | sort > /tmp/playlist.m3u
 
-cvlc --random --play-and-exit /tmp/playlist.m3u </dev/null &>/dev/null&
+find /mnt/files.ntfs/Multimedia/Music -type f ! \( -iname "desktop.ini" -o -iname "thumbs.db" \) > /tmp/playlist.m3u
+
+shuf /tmp/playlist.m3u -o /tmp/playlist.m3u
+
+cvlc --play-and-exit /tmp/playlist.m3u </dev/null &>/dev/null&
 
 nowplaying &
