@@ -15,4 +15,4 @@ play- will allow you to choose a specific artist or song
 ![screenshot1](https://user-images.githubusercontent.com/37476191/136313827-3cd7d369-228f-4d6f-a29f-65fe40042ce8.png)
 
 Displayed on panel  
-![screeshot2](https://user-images.githubusercontent.com/37476191/136313834-e9d78d12-b4f7-4794-b340-c57c87218bc4.png)
+![songtime](https://user-images.githubusercontent.com/37476191/184282760-daebff89-25c8-4313-85ac-0ff7e549f2cb.png)
