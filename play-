@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-pkill nowplaying   # prevents multiple instances running if this script is called multiple times
+pkill vlc   # prevents multiple instances running if this script is called multiple times
 
 read -p "artist or song: " audio
 
